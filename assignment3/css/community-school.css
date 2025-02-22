@@ -11,16 +11,6 @@
     box-sizing: border-box;
   }
   
-@font-face {
-    font-family: 'BodyFont';
-    src: url('body-font.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'HeadingFont';
-    src: url('heading-font.woff2') format('woff2');
-}
-
   body {
     margin: 0 auto;
     min-width: 1000px;
@@ -60,3 +50,32 @@
   }
   
   /* WRITE YOUR CODE BELOW HERE */
+
+@font-face {
+    font-family: 'BodyFont';
+    src: url('body-font.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'HeadingFont';
+    src: url('heading-font.woff2') format('woff2');
+}
+
+body {
+    font-family: 'BodyFont', serif;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'HeadingFont', sans-serif;
+    letter-spacing: 1px;
+}
+
+h1 {
+    text-align: center;
+}
+
+section p:first-of-type {
+    text-indent: 20px;
+}
