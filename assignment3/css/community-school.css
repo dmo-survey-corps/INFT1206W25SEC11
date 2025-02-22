@@ -70,27 +70,25 @@
 
 body {
     font-family: 'Merriweather', serif;
-    font-size: 10px;
+    font-size: 10px; 
     line-height: 1.6;
+    letter-spacing: 0.5px; 
+    word-spacing: 2px; 
 }
 
 h1, h2 {
     font-family: 'Playfair Display', serif;
     letter-spacing: 1px;
-    text-align: center;
-}
-
-h1 {
-    text-align: center;
+    text-align: center; 
 }
 
 section p:first-of-type {
-    text-indent: 20px;
+    text-indent: 20px; 
 }
 
 a {
     text-decoration: underline;
-    color: #a66;
+    color: #a66; 
 }
 
 a:visited {
@@ -107,7 +105,7 @@ a:active {
 }
 
 a[href^="https://"]:after {
-    content: "🔗";
+    content: "🔗"; 
     margin-left: 4px;
 }
 
@@ -129,4 +127,5 @@ nav a {
     padding: 10px;
     border: 1px solid #a66;
     text-align: center;
+    font-size: 1.2rem;
 }
