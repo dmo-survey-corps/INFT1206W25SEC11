@@ -51,25 +51,33 @@
   
   /* WRITE YOUR CODE BELOW HERE */
 
+
 @font-face {
-    font-family: 'BodyFont';
-    src: url('body-font.woff2') format('woff2');
+    font-family: 'Merriweather';
+    src: url('../fonts/Merriweather-Bold.ttf') format('woff2'),
+         url('../fonts/Merriweather-Bold.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'HeadingFont';
-    src: url('heading-font.woff2') format('woff2');
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Bold.ttf') format('woff2'),
+         url('../fonts/PlayfairDisplay-Bold.ttf') format('woff');
+    font-weight: bold;
+    font-style: normal;
 }
 
 body {
-    font-family: 'BodyFont', serif;
+    font-family: 'Merriweather', serif;
     font-size: 10px;
     line-height: 1.6;
 }
 
 h1, h2 {
-    font-family: 'HeadingFont', sans-serif;
+    font-family: 'Playfair Display', serif;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 h1 {
@@ -78,4 +86,47 @@ h1 {
 
 section p:first-of-type {
     text-indent: 20px;
+}
+
+a {
+    text-decoration: underline;
+    color: #a66;
+}
+
+a:visited {
+    color: #844;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+a:active {
+    color: #600;
+    font-weight: bold;
+}
+
+a[href^="https://"]:after {
+    content: "🔗";
+    margin-left: 4px;
+}
+
+li {
+    line-height: 1.6;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 10px;
+}
+
+nav a {
+    display: block;
+    padding: 10px;
+    border: 1px solid #a66;
+    text-align: center;
 }
