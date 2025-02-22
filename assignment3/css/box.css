@@ -8,6 +8,20 @@
 html {
     font-family: sans-serif;
   }
-  
-  /* Your CSS below here */
+
+div {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    background-color: #4a90e2;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 3px black;
+}
   
