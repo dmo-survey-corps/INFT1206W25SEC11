@@ -1,3 +1,11 @@
+/*
+  Name: David Oyeyemi
+  Student Number: 100987382
+  Date: Apr 4th, 2025
+  Description: This code is to let interaction with a bouncing balls website.
+*/
+
+
 // setup canvas
 
 const canvas = document.querySelector("canvas");
