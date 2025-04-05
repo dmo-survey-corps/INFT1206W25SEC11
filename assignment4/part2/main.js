@@ -1,3 +1,11 @@
+/*
+    Name: David Oyeyemi
+    Student Number: 100987382
+    Date: Apr 4th, 2025
+    Description: This is to make interaction with a gallery website.
+*/
+
+
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
