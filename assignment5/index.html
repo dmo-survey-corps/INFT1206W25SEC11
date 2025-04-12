@@ -20,23 +20,21 @@
   </head>
 
   <body>
-    <div class="header">
+    <header>
       <h1>Welcome to our wildlife website</h1>
-    </div>
-
-    <nav class="nav" aria-label="Main navigation">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Our team</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
-
-      <form class="search">
-        <input type="search" name="q" placeholder="Search query">
-        <input type="submit" value="Go!">
-      </form>
-    </nav>
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">OUR TEAM</a></li>
+          <li><a href="#">PROJECTS</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li class="search-bar">
+            <input type="text" placeholder="Search query" />
+            <button>Go!</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
       <article>
@@ -55,14 +53,15 @@
         Bears can also be classified in terms of their habitat — both large and medium bears are just as at home in urban areas as they are in the countryside. Different habitats encourange different behaviour however, as you'll find out below. The below table also gives you some useful facts about bears.
         <br><br>
         <table>
+          <caption>Bear Information: Types, Habitats, and Diet</caption> <!-- Added table summary -->
           <thead>
             <tr>
-              <td>Bear Type</td>
-              <td>Coat</td>
-              <td>Adult size</td>
-              <td>Habitat</td>
-              <td>Lifespan</td>
-              <td>Diet</td>
+              <th scope="col">Bear Type</th> <!-- Added scope="col" for column header -->
+              <th scope="col">Coat</th>
+              <th scope="col">Adult size</th>
+              <th scope="col">Habitat</th>
+              <th scope="col">Lifespan</th>
+              <th scope="col">Diet</th>
             </tr>
           </thead>
           <tbody>
@@ -84,6 +83,7 @@
             </tr>
           </tbody>
         </table>
+        
 
         <h3>Habitats and Eating habits</h3>
         <br><br>
@@ -107,12 +107,13 @@
           <source src="media/bear.mp3" type="audio/mp3">
           <source src="media/bear.ogg" type="audio/ogg">
           <p>It looks like your browser doesn't support HTML5 audio players.</p>
+          <a href="media/bear.mp3" download> Download the mp3</a> to listen.
         </audio>
 
         <!-- Transcript for accessibility -->
         <section aria-labelledby="bear-transcript">
           <h2 id="bear-transcript">Audio Transcript</h2>
-          <p>[Man Talking] This isn't really an audio fact file about bears, but it is an audio file that you can trnscribe</p>
+          <p>[Man Talking] This isn't really an audio fact file about bears, but it is an audio file that you can transcribe</p>
         </section>
         
         <aside>
@@ -125,7 +126,7 @@
 
         </aside>
         <section class="comments">
-          <div class="show-hide">Show comments</div>
+          <button class="show-hide" id="toggle-comments" aria-expanded="false">Show comments</button>
 
           <div class="comment-wrapper">
 

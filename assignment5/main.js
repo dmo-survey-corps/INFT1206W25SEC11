@@ -5,21 +5,23 @@
   Description: This code is to let interaction with a bear article site.
 */
 
-// Get all buttons that toggle visibility
-const toggleButtons = document.querySelectorAll('.toggle');
+// Get the Show/Hide button by its new class or ID
+const toggleButtons = document.querySelectorAll('.show-hide');
 
 // Loop through each button and add event listeners
 toggleButtons.forEach(button => {
   button.addEventListener('click', function () {
-    const article = document.querySelector(`#${button.getAttribute('data-target')}`);
+    const article = document.querySelector('.comment-wrapper');
     
-    // Toggle visibility of the target article
+    // Toggle visibility of the comments section
     if (article.style.display === "none" || article.style.display === "") {
-      article.style.display = "block"; // Show the article
+      article.style.display = "block"; // Show the comments
       button.setAttribute('aria-expanded', 'true'); // Set expanded state for accessibility
+      button.textContent = 'Hide comments'; // Update button text
     } else {
-      article.style.display = "none"; // Hide the article
+      article.style.display = "none"; // Hide the comments
       button.setAttribute('aria-expanded', 'false'); // Set collapsed state for accessibility
+      button.textContent = 'Show comments'; // Update button text
     }
   });
 

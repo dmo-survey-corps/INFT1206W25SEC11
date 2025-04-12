@@ -5,23 +5,138 @@
   Description: This code is to style a bear article site.
 */
 
-/* || General setup */
-html {
-  font-size: 10px;
-  background-color: #f4f4f4;
+/* === General Reset & Base Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #ffffff;
-  color: #333333; /* Dark text for better readability */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+  color: #333333;
 }
 
-font[size="7"], font[size="6"], font[size="5"] {
-  color: #333333; /* Darker text for better visibility */
+html {
+  font-size: 10px;
 }
 
-/* || Typography */
+/* === Header Styles === */
+header {
+  background-color: #d8d7f1;
+  padding: 1em 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 3em;
+  font-family: cursive;
+  color: white;
+  text-shadow: 3px 3px 5px #000;
+  margin-bottom: 1em;
+}
+
+/* === Navigation Styles === */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  list-style: none;
+  background-color: white;
+  padding: 1em;
+  border-top: 3px solid #ccc;
+  border-bottom: 3px solid #ccc;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding: 0.5em;
+}
+
+/* === Search Bar === */
+.search-bar input {
+  padding: 0.3em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  padding: 0.4em 1em;
+  margin-left: 0.3em;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* === Main Layout === */
+main {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  padding: 2em;
+  flex-wrap: wrap;
+}
+
+article {
+  flex: 2;
+  background-color: #fff;
+  padding: 1.5em;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article h2, article h3 {
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+/* === Sidebar / Secondary Column === */
+aside, .secondary {
+  flex: 1;
+  background-color: #fff;
+  padding: 1.5em;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+aside h3, .secondary h3 {
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+aside ul, .secondary ul {
+  list-style: disc inside;
+}
+
+/* === Footer === */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+/* === Your Original Custom Styles (Preserved) === */
+
 font[size="7"], font[size="6"], font[size="5"] {
+  color: #333333;
   font-family: 'Sonsie One', cursive;
 }
 
@@ -49,205 +164,4 @@ p, li, table {
 
 p, input, li, table, label {
   color: #2a2a2a;
-}
-
-/* || Header layout */
-div.nav {
-  background-color: #ff80ff; /* stays the same */
-}
-
-article, footer, .secondary {
-  background-color: #e6f4ea; /* new light green */
-  color: #2a2a2a; /* ensures readable text */
-}
-
-article, footer, .secondary {
-  padding: 10px 30px;
-}
-
-article {
-  margin-right: 10px;
-}
-
-div.nav {
-  height: 50px;
-  background-color: #ff80ff; /* Correct hex code */
-  display: flex;
-  padding: 1% 0;
-  margin-bottom: 10px;
-}
-
-div.nav ul {
-  padding: 0;
-  list-style-type: none;
-  flex: 2;
-  display: flex;
-}
-
-div.nav li {
-  display: inline;
-  text-align: center;
-  flex: 1;
-}
-
-div.nav a {
-  display: inline-block;
-  font-size: 2rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: black;
-}
-
-div.nav .search {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding: 0 2em;
-}
-
-.search input {
-  font-size: 1.6rem;
-  height: 32px;
-}
-
-.search input[type="search"] {
-  flex: 3;
-}
-
-.search input[type="submit"] {
-  flex: 1;
-  margin-left: 1rem;
-  background: #333;
-  border: 0;
-  color: white;
-}
-
-/* || Main layout */
-main {
-  display: flex;
-  flex-wrap: wrap; /* Allow flexibility for smaller screens */
-}
-
-article {
-  flex: 5;
-}
-
-.secondary {
-  flex: 2;
-}
-
-footer {
-  margin-top: 10px;
-}
-
-/* Table styling */
-table {
-  width: 100%;
-  background-color: #dde;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 10px;
-}
-
-td {
-  text-align: center;
-}
-
-th[scope="col"] {
-  border-bottom: 1px solid black;
-}
-
-tbody tr:nth-child(odd) {
-  background-color: #def;
-}
-
-/* Styling content images and audio */
-img, audio {
-  display: block;
-  margin: 0 auto;
-}
-
-audio {
-  width: 500px;
-}
-
-/* Comments styling */
-.comments {
-  background-color: #def;
-  padding: 10px;
-}
-
-.show-hide {
-  cursor: pointer;
-}
-
-.comments font[size="6"] {
-  font-size: 2rem;
-}
-
-.comments font[size="6"]:nth-of-type(2) {
-  margin-bottom: 0;
-}
-
-.comment-form {
-  margin-bottom: 3rem;
-}
-
-.comment-form .flex-pair {
-  display: flex;
-  padding: 0 3rem 1rem;
-}
-
-.comment-form label {
-  align-self: center;
-  flex: 2;
-  text-align: right;
-}
-
-.comment-form input {
-  margin-left: 1rem;
-  flex: 6;
-}
-
-.show-hide {
-  text-align: center;
-  width: 150px;
-}
-
-.comment-form input, .comment-form label, .show-hide {
-  font-size: 1.6rem;
-  line-height: 32px;
-}
-
-.comment-form input[type="submit"], .show-hide {
-  background: #333;
-  border: 0;
-  color: white;
-}
-
-.comment-form input[type="submit"] {
-  width: 30%;
-  display: block;
-  margin: 0 auto;
-}
-
-.comment-container {
-  margin-top: 0;
-}
-
-.comment-container li {
-  list-style-type: none;
-  display: flex;
-}
-
-.comment-container li p:nth-child(1) {
-  flex: 1;
-  font-weight: bold;
-}
-
-.comment-container li p:nth-child(2) {
-  flex: 5;
 }
