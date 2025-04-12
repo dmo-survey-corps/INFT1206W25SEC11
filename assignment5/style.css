@@ -52,8 +52,13 @@ p, input, li, table, label {
 }
 
 /* || Header layout */
-div.nav, article, footer, .secondary {
-  background-color: green;
+div.nav {
+  background-color: #ff80ff; /* stays the same */
+}
+
+article, footer, .secondary {
+  background-color: #e6f4ea; /* new light green */
+  color: #2a2a2a; /* ensures readable text */
 }
 
 article, footer, .secondary {
