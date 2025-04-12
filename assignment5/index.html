@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessibility assessment</title>
+    <title>Accessibility Assessment</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css">
 
@@ -23,12 +23,12 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Our team</a></li>
+        <li><a href="#">Our Team</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">Blog</a></li>
       </ul>
 
-      <form class="search" role="search">
+      <form class="search" role="search" aria-label="Search for content on bears">
         <input type="search" name="q" placeholder="Search query" aria-label="Search for bears">
         <input type="submit" value="Go!">
       </form>
@@ -36,12 +36,12 @@
 
     <main>
       <article>
-        <h2>The trouble with Bears</h2>
+        <h2>The Trouble with Bears</h2>
         <p>By Evan Wild</p>
 
         <p>Tall, lumbering, angry, dangerous. The real live bears of this world...</p>
 
-        <h3>Types of bear</h3>
+        <h3>Types of Bear</h3>
         <p>Bears come in two varieties — large and medium...</p>
 
         <table summary="The table provides information about bear types, coat, habitat, lifespan, and diet.">
@@ -49,7 +49,7 @@
             <tr>
               <th scope="col">Bear Type</th>
               <th scope="col">Coat</th>
-              <th scope="col">Adult size</th>
+              <th scope="col">Adult Size</th>
               <th scope="col">Habitat</th>
               <th scope="col">Lifespan</th>
               <th scope="col">Diet</th>
@@ -75,12 +75,12 @@
           </tbody>
         </table>
 
-        <h3>Habitats and Eating habits</h3>
-        <p>Wild bears eat a variety of meat, fish, fruit, nuts...</p>
+        <h3>Habitats and Eating Habits</h3>
+        <p>Wild bears eat a variety of meat, fish, fruit, and nuts...</p>
 
         <img src="media/wild-bear.jpg" alt="A wild brown bear in the forest" />
 
-        <h3>Mating rituals</h3>
+        <h3>Mating Rituals</h3>
         <p>Bears are romantic creatures by nature...</p>
 
         <audio controls>
@@ -90,30 +90,30 @@
         </audio>
 
         <aside>
-          <h4>About the author</h4>
+          <h4>About the Author</h4>
           <p>Evan Wild is an unemployed plumber...</p>
         </aside>
 
         <section class="comments">
-          <button class="show-hide" aria-expanded="false" aria-controls="comments-section">Show comments</button>
+          <button class="show-hide" aria-expanded="false" aria-controls="comments-section" id="toggle-comments">Show Comments</button>
 
           <div class="comment-wrapper" id="comments-section" style="display: none;">
-            <h2>Add comment</h2>
-            <form class="comment-form">
-              <label for="name">Your name:</label>
-              <input type="text" name="name" id="name" placeholder="Enter your name">
+            <h2>Add Comment</h2>
+            <form class="comment-form" aria-labelledby="toggle-comments">
+              <label for="name">Your Name:</label>
+              <input type="text" name="name" id="name" placeholder="Enter your name" aria-label="Enter your name">
 
-              <label for="comment">Your comment:</label>
-              <input type="text" name="comment" id="comment" placeholder="Enter your comment">
+              <label for="comment">Your Comment:</label>
+              <input type="text" name="comment" id="comment" placeholder="Enter your comment" aria-label="Enter your comment">
 
-              <input type="submit" value="Submit comment">
+              <input type="submit" value="Submit Comment">
             </form>
 
             <h2>Comments</h2>
             <ul class="comment-container">
               <li>
                 <p>Bob Fossil</p>
-                <p>Oh I am so glad you taught me all about the big brown angry guys in the woods...</p>
+                <p>Oh, I am so glad you taught me all about the big brown angry guys in the woods...</p>
               </li>
             </ul>
           </div>
@@ -121,11 +121,11 @@
       </article>
 
       <div class="secondary">
-        <h3>Related</h3>
+        <h3>Related Articles</h3>
         <ul>
-          <li><a href="#">The trouble with Bees</a></li>
-          <li><a href="#">The trouble with Otters</a></li>
-          <li><a href="#">The trouble with Penguins</a></li>
+          <li><a href="#">The Trouble with Bees</a></li>
+          <li><a href="#">The Trouble with Otters</a></li>
+          <li><a href="#">The Trouble with Penguins</a></li>
         </ul>
       </div>
     </main>

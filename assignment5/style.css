@@ -5,35 +5,24 @@
   Description: This code is to style a bear article site.
 */
 
-
 /* || General setup */
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
 html {
   font-size: 10px;
-  background-color: #dde;
+  background-color: #f4f4f4;
 }
 
 body {
-  width: 80%;
-  min-width: 1024px;
-  margin: 0 auto;
+  background-color: #ffffff;
+  color: #333333; /* Dark text for better readability */
 }
-
-/* || typography */
 
 font[size="7"], font[size="6"], font[size="5"] {
-  font-family: 'Sonsie One', cursive;
-  color: #2a2a2a;
+  color: #333333; /* Darker text for better visibility */
 }
 
-p, input, li, table, label {
-  font-family: 'Open Sans Condensed', sans-serif;
-  color: #2a2a2a;
+/* || Typography */
+font[size="7"], font[size="6"], font[size="5"] {
+  font-family: 'Sonsie One', cursive;
 }
 
 font[size="7"] {
@@ -53,13 +42,17 @@ font[size="5"] {
 }
 
 p, li, table {
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
 }
 
-/* || header layout */
+p, input, li, table, label {
+  color: #2a2a2a;
+}
 
-div[class="nav"], article, footer, .secondary {
+/* || Header layout */
+div.nav, article, footer, .secondary {
   background-color: green;
 }
 
@@ -71,28 +64,28 @@ article {
   margin-right: 10px;
 }
 
-div[class="nav"] {
+div.nav {
   height: 50px;
-  background-color: ff80ff;
+  background-color: #ff80ff; /* Correct hex code */
   display: flex;
   padding: 1% 0;
   margin-bottom: 10px;
 }
 
-div[class="nav"] ul {
+div.nav ul {
   padding: 0;
   list-style-type: none;
   flex: 2;
   display: flex;
 }
 
-div[class="nav"] li {
+div.nav li {
   display: inline;
   text-align: center;
   flex: 1;
 }
 
-div[class="nav"] a {
+div.nav a {
   display: inline-block;
   font-size: 2rem;
   text-transform: uppercase;
@@ -100,7 +93,7 @@ div[class="nav"] a {
   color: black;
 }
 
-div[class="nav"] .search {
+div.nav .search {
   flex: 1;
   display: flex;
   align-items: center;
@@ -125,10 +118,10 @@ div[class="nav"] .search {
   color: white;
 }
 
-/* || main layout */
-
+/* || Main layout */
 main {
   display: flex;
+  flex-wrap: wrap; /* Allow flexibility for smaller screens */
 }
 
 article {
@@ -144,7 +137,6 @@ footer {
 }
 
 /* Table styling */
-
 table {
   width: 100%;
   background-color: #dde;
@@ -167,8 +159,7 @@ tbody tr:nth-child(odd) {
   background-color: #def;
 }
 
-/* styling content images and audio */
-
+/* Styling content images and audio */
 img, audio {
   display: block;
   margin: 0 auto;
@@ -179,7 +170,6 @@ audio {
 }
 
 /* Comments styling */
-
 .comments {
   background-color: #def;
   padding: 10px;
@@ -256,4 +246,3 @@ audio {
 .comment-container li p:nth-child(2) {
   flex: 5;
 }
-
